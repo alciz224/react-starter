@@ -1,7 +1,7 @@
 // src/components/pages/Profile.jsx
 import React, { useState } from 'react';
 import { Container, Card, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth'
 
 const Profile = () => {
   const { currentUser } = useAuth();

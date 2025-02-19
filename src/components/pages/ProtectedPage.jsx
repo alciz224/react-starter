@@ -1,7 +1,7 @@
 // src/components/pages/ProtectedPage.jsx
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth'
 
 const ProtectedPage = () => {
   const { currentUser } = useAuth();
