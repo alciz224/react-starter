@@ -1,7 +1,8 @@
 // src/components/layout/Navbar.jsx
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+//import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth'
 import { Navbar as BootstrapNavbar, Nav, Container, Button } from 'react-bootstrap';
 
 const Navbar = () => {
