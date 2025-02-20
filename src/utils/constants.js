@@ -2,10 +2,10 @@
 export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 
 export const AUTH_ENDPOINTS = {
-  LOGIN: `${API_URL}/auth/signin`,
-  REGISTER: `${API_URL}/auth/signup`,
-  LOGOUT: `${API_URL}/auth/signout`,
-  REFRESH_TOKEN: `${API_URL}/auth/refreshtoken`
+  LOGIN: `${API_URL}/login`,
+  REGISTER: `${API_URL}/register`,
+  LOGOUT: `${API_URL}/logout`,
+  REFRESH_TOKEN: `${API_URL}/refresh`
 };
 
 export const STORAGE_KEYS = {

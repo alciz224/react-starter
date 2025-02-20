@@ -6,6 +6,7 @@ import { AUTH_ENDPOINTS } from '../utils/constants';
 class AuthService {
   async login(username, password) {
     try {
+      alert("Login Process");
       const response = await api.post(AUTH_ENDPOINTS.LOGIN, { username, password });
       if (response.data.accessToken) {
         TokenService.setUser(response.data);
