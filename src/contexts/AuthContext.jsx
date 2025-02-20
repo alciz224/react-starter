@@ -31,7 +31,6 @@ export const AuthProvider = ({ children }) => {
 
   const logIn = async (username, password) => {
     const userData = await AuthService.login(username, password);
-    alert("ok");
     setCurrentUser(userData);
     return userData;
   };
@@ -56,4 +55,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-//export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
