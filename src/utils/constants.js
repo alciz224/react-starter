@@ -3,7 +3,7 @@ export const API_URL = import.meta.env.VITE_API_URL || 'https://alycisse224.pyth
 
 
 export const AUTH_ENDPOINTS = {
-  LOGIN: `${API_URL}/login`,
+  LOGIN: `${API_URL}/login/`,
   REGISTER: `${API_URL}/register`,
   LOGOUT: `${API_URL}/logout`,
   REFRESH_TOKEN: `${API_URL}/refresh`
