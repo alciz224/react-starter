@@ -22,8 +22,8 @@ const setupInterceptors = (onUnauthorized) => {
           originalConfig._retry = true;
           try {
             const rs = await api.post(AUTH_ENDPOINTS.REFRESH_TOKEN);
-            const { accessToken } = rs.data;
-            TokenService.updateLocalAccessToken(accessToken);
+            const { access } = rs.data;
+            TokenService.updateLocalAccessToken(access);
             return api(originalConfig);
           } catch (_error) {
             if (onUnauthorized) onUnauthorized();

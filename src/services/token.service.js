@@ -4,13 +4,11 @@ import { STORAGE_KEYS } from '../utils/constants';
 class TokenService {
   getLocalRefreshToken() {
     const user = JSON.parse(localStorage.getItem(STORAGE_KEYS.USER));
-    alert("local refresh token", user);
     return user?.refreshToken;
   }
 
   getLocalAccessToken() {
     const user = JSON.parse(localStorage.getItem(STORAGE_KEYS.USER));
-    alert("access token", user);
     return user?.accessToken;
   }
 
@@ -18,17 +16,14 @@ class TokenService {
     const user = JSON.parse(localStorage.getItem(STORAGE_KEYS.USER));
     user.accessToken = token;
     localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(user));
-    alert("updated token", user);
   }
 
   getUser() {
-    alert(JSON.stringify(localStorage.getItem(STORAGE_KEYS.USER)));
     return JSON.parse(localStorage.getItem(STORAGE_KEYS.USER));
   }
 
   setUser(user) {
     localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(user));
-    alert("set user", JSON.parse(localStorage.getItem(STORAGE_KEYS.USER)));
   }
 
   removeUser() {
