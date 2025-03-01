@@ -11,6 +11,7 @@ class AuthService {
       if (response.data.accessToken) {
         TokenService.setUser(response.data);
       }
+      alert(response.data);
       return response.data;
     } catch (error) {
       throw this.handleError(error);
