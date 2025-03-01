@@ -22,7 +22,7 @@ class TokenService {
   }
 
   getUser() {
-    alert("get user", JSON.parse(localStorage.getItem(STORAGE_KEYS.USER)));
+    alert(JSON.stringify(localStorage.getItem(STORAGE_KEYS.USER)));
     return JSON.parse(localStorage.getItem(STORAGE_KEYS.USER));
   }
 
