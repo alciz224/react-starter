@@ -34,6 +34,19 @@ class AuthService {
     }
   }
 
+  async currentUser() {
+    try {
+      res = await api.get(AUTH_ENDPOINTS.USER);
+      if(res.data.id && res.data.username){
+        return true;
+      }else{
+        return false;
+      }
+    } catch (error) {
+      throw this.handleError(error);
+    }
+  }
+
   handleError(error) {
     const message =
       (error.response && error.response.data && error.response.data.message) ||

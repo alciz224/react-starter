@@ -3,6 +3,7 @@ export const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/ap
 
 
 export const AUTH_ENDPOINTS = {
+  USER: `${API_URL}/me`,
   LOGIN: `${API_URL}/login/`,
   REGISTER: `${API_URL}/register`,
   LOGOUT: `${API_URL}/logout`,
