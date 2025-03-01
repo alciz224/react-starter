@@ -8,8 +8,8 @@ class AuthService {
     try {
       alert(`Login Process : ${AUTH_ENDPOINTS.LOGIN}/`);
       const response = await api.post(AUTH_ENDPOINTS.LOGIN, { username, password });
-      alert(response)
-      if (response.data.accessToken) {
+      alert(response.data.access)
+      if (response.data.access) {
         TokenService.setUser(response.data);
       }
       return response.data;
