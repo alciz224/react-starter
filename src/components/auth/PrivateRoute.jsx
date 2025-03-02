@@ -4,7 +4,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 
 const PrivateRoute = () => {
-  const { isLoggedIn, is_logged, loading } = useAuth();
+  const { isLoggedIn, loading } = useAuth();
   const location = useLocation();
 
   if (loading) {
@@ -17,7 +17,7 @@ const PrivateRoute = () => {
     );
   }
 
-  return is_logged ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
+  return isLoggedIn ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
 };
 
 export default PrivateRoute;

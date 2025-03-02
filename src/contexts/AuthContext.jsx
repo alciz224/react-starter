@@ -39,20 +39,8 @@ export const AuthProvider = ({ children }) => {
     return await AuthService.register(username, email, password);
   };
 
-  const me = async () => {
-    return await AuthService.currentUser();
-  };
-
-  is_logged = async ()=>{
-  if(me && !!currentUser){
-    return true;
-  }else{
-    return false;
-  }
-  }
 
   const value = {
-    is_logged,
     currentUser,
     isLoggedIn: !!currentUser,
     loading,
